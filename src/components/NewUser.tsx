@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../app.css";
+
 import { createUser } from "../utils/localstorage";
 
 interface ContainerProps {

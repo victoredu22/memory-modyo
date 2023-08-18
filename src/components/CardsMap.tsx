@@ -9,7 +9,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { AppStore } from "../redux/store";
 import { resetAttemp, updateAttemp } from "../redux/states/attemps";
 import React, { useEffect, useState } from "react";
-import "../app.css";
 import {
   decrementCorrectScore,
   incrementCorrectScore,

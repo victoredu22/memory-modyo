@@ -10,7 +10,6 @@ import { getUser } from "../utils/localstorage";
 import Modal from "../components/Modal";
 import NewUser from "../components/NewUser";
 import { apiHelper } from "../utils/HttpManagementService";
-
 import { FinalScore } from "../components/FinalScore";
 import { ScoreBoard } from "../components/ScoreBoard";
 
