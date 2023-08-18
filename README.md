@@ -19,7 +19,7 @@ La aplicación consiste en el juego concentration o memory. Para el proceso recl
 - git para el versionamiento codigo
 - npm el manejador de paquetes
 
-## Se clona el repositorio
+### clonacion del repositorio
 
 ```bash
 git clone git@github.com:victoredu22/memory-modyo.git
