@@ -2,6 +2,7 @@ interface ContainerProps {
   close: () => void;
 }
 export const FinalScore: React.FC<ContainerProps> = ({ close }) => {
+  console.log("holii");
   return (
     <div className="form-container">
       <h3>
@@ -15,6 +16,7 @@ export const FinalScore: React.FC<ContainerProps> = ({ close }) => {
       </p>
 
       <a
+        data-testid="linkedin-link"
         href="https://www.linkedin.com/in/victorcurilao"
         target="_blank"
         rel="noopener noreferrer"
