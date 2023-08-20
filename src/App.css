@@ -1,10 +1,81 @@
+.App{
+background-color: #E9E9E9
+}
+.card__container{
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.0.5),
+}
+.card__title{
+  padding-left: 10px;
+}
+.card__active{
+  width: 200px;
+  height: 200px !important;
+  cursor: pointer;
+}
+.card__inactive{
+  width: 200px;
+  height: 200px !important;
+  cursor: pointer;
+  transform: rotateY(0deg);
+}
+.score__container{
+  background-color: white;
+  border-radius: 20px;
+  margin-left: 2%;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+  height: 300px;
+  margin-bottom: 20px;
+}
+.score__player{
+  font-weight: bold;
+  margin-right: 0px;
+}
+.score__player--fontWeiht{
+  font-weight: 500;
+}
+.score__title{
+  font-weight: bold;
+  margin-right: 20px;
+  margin-top: 7px;
+  margin-left: 5px;
+}
+.score__point{
+  font-weight: 500;
+}
+.score__success--icon {
+  font-size: 1.6rem;
+  color: #0DCAF0;
+}
+.score__incorrect--icon{
+  font-size: 1.6rem;
+}
+
+.href__linkedin--icon{
+  font-size: 1.6rem;
+  color: #0A66C2;
+}
+.href__github--icon{
+  font-size: 1.6rem;
+  color: black;
+  margin-left: 10px;
+}
+.href__google--icon{
+  font-size: 1.6rem;
+  color: #eb493b;
+  margin-left: 10px;
+
+}
+.modal__body{
+  width: 100%
+}
 .transition-div {
   padding: 1rem;
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
 .bg-danger {
   background-color: #dc3545;
 }

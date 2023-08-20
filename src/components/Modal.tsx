@@ -18,7 +18,7 @@ const Modal: React.FC<ContainerProps> = ({ children, open }) => {
   return (
     <div>
       <BootstrapModal show={show} onHide={handleClose}>
-        <BootstrapModal.Body style={{ width: "100%" }} className="text-center">
+        <BootstrapModal.Body className="text-center modal__body">
           {children}
         </BootstrapModal.Body>
       </BootstrapModal>

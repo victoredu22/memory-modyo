@@ -27,8 +27,8 @@ export const ScoreBoard: React.FC<ContainerProps> = ({ setOpenedScore }) => {
         <hr></hr>
       </div>
       <div>
-        <p style={{ fontWeight: "bold", marginRight: "0px" }}>
-          Jugador: <span style={{ fontWeight: "500" }}>{getUser()}</span>
+        <p className="score__player">
+          Jugador: <span className="score__player--fontWeiht">{getUser()}</span>
         </p>
         <div className="progress">
           <div
@@ -45,42 +45,20 @@ export const ScoreBoard: React.FC<ContainerProps> = ({ setOpenedScore }) => {
         <div className="d-flex justify-content-between mt-2">
           <div className="d-flex">
             {" "}
-            <i
-              className="bi bi-check-circle"
-              style={{ fontSize: "1.6rem", color: "#0DCAF0" }}
-            ></i>
-            <p
-              style={{
-                fontWeight: "bold",
-                marginRight: "20px",
-                marginTop: "7px",
-                marginLeft: "5px",
-              }}
-            >
+            <i className="bi bi-check-circle score__success--icon"></i>
+            <p className="score__title">
               Aciertos:
-              <span style={{ fontWeight: "500" }}>
+              <span className="score__success--point">
                 {" "}
                 {score.correctScorePoints}
               </span>
             </p>
           </div>
           <div className="d-flex">
-            <i
-              className="bi bi-x-circle text-danger"
-              style={{ fontSize: "1.6rem" }}
-            ></i>
-            <p
-              style={{
-                fontWeight: "bold",
-                marginRight: "20px",
-                marginTop: "7px",
-                marginLeft: "5px",
-              }}
-            >
+            <i className="bi bi-x-circle text-danger score__incorrect--icon"></i>
+            <p className="score__title">
               Errores:
-              <span style={{ fontWeight: "500" }}>
-                {score.incorrectScorePoints}
-              </span>
+              <span className="score__point">{score.incorrectScorePoints}</span>
             </p>
           </div>
         </div>

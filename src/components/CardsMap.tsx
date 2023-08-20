@@ -1,10 +1,5 @@
 import { CardInterface } from "../interfaces/CardInterface";
-import { Dispatch } from "redux";
-import {
-  updateCardState,
-  updateStateCard,
-  updateStateFalseCard,
-} from "../redux/states/cards";
+import { updateStateCard, updateStateFalseCard } from "../redux/states/cards";
 import { useDispatch, useSelector } from "react-redux";
 import { AppStore } from "../redux/store";
 import { resetAttemp, updateAttemp } from "../redux/states/attemps";
@@ -43,8 +38,8 @@ const CardsMap: React.FC<CardsMapProps> = ({ cards }) => {
 
     if (
       string1 === string2 &&
-      attemps.firstAttemp.uuid != "" &&
-      attemps.secondAttemp.uuid != ""
+      attemps.firstAttemp.uuid !== "" &&
+      attemps.secondAttemp.uuid !== ""
     ) {
       setBlockedButton(true);
       dispatch(resetAttemp());
@@ -53,9 +48,9 @@ const CardsMap: React.FC<CardsMapProps> = ({ cards }) => {
     }
 
     if (
-      string1 != string2 &&
-      attemps.firstAttemp.uuid != "" &&
-      attemps.secondAttemp.uuid != ""
+      string1 !== string2 &&
+      attemps.firstAttemp.uuid !== "" &&
+      attemps.secondAttemp.uuid !== ""
     ) {
       setBlockedButton(true);
       setTimeout(() => {
@@ -66,12 +61,13 @@ const CardsMap: React.FC<CardsMapProps> = ({ cards }) => {
         dispatch(updateStateFalseCard(attemps.secondAttemp));
       }, 1000);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [attemps]);
 
   return (
     <div className="row">
       <div className="col-md-12">
-        <h4 style={{ paddingLeft: "10px" }}>Desafio Memory Modyo</h4>
+        <h4>Desafio Memory Modyo</h4>
       </div>
 
       {cards.map((card, index) => (
@@ -79,25 +75,14 @@ const CardsMap: React.FC<CardsMapProps> = ({ cards }) => {
           {card.state ? (
             <img
               src={card.url}
-              alt="Descripción de la imagen"
-              className="img-thumbnail"
-              style={{
-                width: "200px",
-                height: "200px",
-                cursor: "pointer",
-              }}
+              alt="card active"
+              className="img-thumbnail card__active"
             />
           ) : (
             <img
               src="assets/modyoCard.jpg"
               alt="Descripción de la imagen"
-              className="img-thumbnail"
-              style={{
-                width: "200px",
-                height: "200px",
-                cursor: "pointer",
-                transform: "rotateY(0deg)", // Sin rotación
-              }}
+              className="img-thumbnail card__inactive"
               onClick={() =>
                 !blockedButton ? handleCardChange(card) : undefined
               }

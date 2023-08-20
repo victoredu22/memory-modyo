@@ -71,27 +71,10 @@ export const Main = () => {
         <FinalScore close={closeModalScore} />
       </Modal>
       <div className="row">
-        <div
-          className="col-md-8 p-4 order-2 order-md-1"
-          style={{
-            backgroundColor: "white",
-            borderRadius: "20px",
-            boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.0.5)",
-          }}
-        >
+        <div className="col-md-8 p-4 order-2 order-md-1 card__container">
           <CardsMap cards={cards} />
         </div>
-        <div
-          className="col-md-3 ml-2 p-4 order-1 order-md-2"
-          style={{
-            backgroundColor: "white",
-            borderRadius: "20px",
-            marginLeft: "2%",
-            boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.0.5)",
-            height: "300px",
-            marginBottom: "20px",
-          }}
-        >
+        <div className="col-md-3 ml-2 p-4 order-1 order-md-2 score__container">
           <ScoreBoard setOpenedScore={setOpenedModalScore} />
         </div>
       </div>

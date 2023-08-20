@@ -7,7 +7,7 @@ import { Main } from "./pages/Main";
 function App() {
   return (
     <Provider store={store}>
-      <div className="App" style={{ backgroundColor: "#E9E9E9" }}>
+      <div className="App">
         <header className="App-header"></header>
         <nav className="navbar navbar-light">
           <div className="container">
